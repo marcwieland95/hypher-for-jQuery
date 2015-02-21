@@ -1,6 +1,6 @@
 # Hypher for jQuery
 
-A small and fast JavaScript hyphenation engine for jQuery.
+A small and fast JavaScript hyphenation engine for jQuery (and also Zepto.js).
 The core is based on the code of Bram Stein (@bramstein), which is build for jQuery and Node.js, but has some pitfalls in the jQuery version.
 
 We are in a stable beta version. So feel free to use it. We're looking forward to some improvements.
@@ -8,11 +8,16 @@ We are in a stable beta version. So feel free to use it. We're looking forward t
 ##Setup
 Have a look inside the `@example` folder.
 
-###1. Include jQuery
-This hyphenation engine is mostly written in plain JavaScript, but also needs jQuery.
+###1. Include jQuery or Zepto.js
+This hyphenation engine is mostly written in plain JavaScript, but also needs jQuery or Zepto.js.
 
+jQuery 1.x or 2.x
 ``` html
 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+```
+Zepto.js
+``` html
+<script src="http://zeptojs.com/zepto.min.js"></script>
 ```
 
 ###2. Include language pattern
@@ -62,9 +67,29 @@ Your available settings in Hypher
 
 | Option | Default | Type | Description
 |--------|---------|------|------------
-| `lang` | lang-attribute in html | String | Set the correct language for your content. Make sure to set the name of your pattern file
-| `leftMin` | pattern file | Int | The minimum amount of characters on the left of the word
-| `rightMin` | pattern file | Int | The minimum amount of characters on the right of the word
+| `lang` | lang-attr in html | String | Set the correct language for your content. Make sure to set the name of your pattern file
+| `leftMin` | patterns | Int | The minimum amount of characters on the left of the word
+| `rightMin` | patterns | Int | The minimum amount of characters on the right of the word
 | `minLength` | `4` | Int | Minimumal word length to hyphenate
 | `hypenChar` | `false` | Bol | This shows, where the words would hypenate - for debuging
-| `exceptions` | pattern file | string | Add exceptions as a comma-separated string - add your custom hypenation with |  (vertical bar)
+| `exceptions` | patterns | String | Add exceptions as a comma-separated string - add your custom hypenation with &#124; (vertical bar)
+
+##Changelog
+`0.2.0` / `21.02.2015`
+- Add Zepto.js support
+- Add different settings for customization
+- Easier init
+
+`0.1.0` / `21.02.2015`
+- Bootstrap
+- Core engine written by Bram Stein (https://github.com/bramstein/hypher)
+
+## License
+Hypher is licensed under the three clause BSD license (see BSD.txt.)
+
+## See also
+* [Hyphenator.js](http://code.google.com/p/hyphenator/)
+
+## Contributors
+* Bram Stein - core hypenation engine
+* Marc Wieland - improved jQuery support

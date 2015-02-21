@@ -1,4 +1,4 @@
-(function($) {
+;(function($) {
 
     /**
      * Hyphenation Constructor
@@ -282,7 +282,8 @@
         if (options.lang !== undefined) {
             language = options.lang;
         } else {
-            language = $('html').attr('lang');
+            //language = $('html').attr('lang');
+            language = document.getElementsByTagName('html')[0].getAttribute('lang');
         }
 
         return this.each(function () {
@@ -296,4 +297,4 @@
 
     };
 
-})(jQuery);
+})($);
