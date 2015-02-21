@@ -1,0 +1,20 @@
+{
+  "name": "hypher-for-jquery",
+  "version": "0.1.0",
+  "description": "This is a hyphenation engine for jQuery",
+  "main": "dist/jquery.hypher.js",
+  "author": "@xxcram",
+  "homepage": "https://github.com/xxcram",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xxcram/hypher-for-jQuery.git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "load-grunt-tasks": "~0.2.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-uglify": "~0.3.2",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-concat": "~0.3.0"
+  }
+}
