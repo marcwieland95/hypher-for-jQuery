@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 
 		jshint: {
-			glide: {
+			hypher: {
 				options: {
 					'-W099': true,
 				},
@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 		},
 
 		concat: {
-			glide: {
+			hypher: {
 				options: {
 				    banner: '/*!\n' +
 				    		' * <%= pkg.name %>\n' +
@@ -31,7 +31,7 @@ module.exports = function(grunt) {
 		},
 
 		uglify: {
-			glidemin: {
+			hyphermin: {
 				options: {
 				    banner: '/*!\n' +
 				    		' * <%= pkg.name %>\n' +
