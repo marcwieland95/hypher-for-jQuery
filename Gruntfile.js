@@ -18,12 +18,12 @@ module.exports = function(grunt) {
 				    banner: '/*!\n' +
 				    		' * <%= pkg.name %>\n' +
 				    		' * Version: <%= pkg.version %>\n' +
-							' * <%= pkg.description %>\n' +
-							' * Author: <%= pkg.author %>\n' +
-							' * Site: http://<%= pkg.homepage %>/\n' +
-							' * Licensed under the BSD license\n' +
-							' */\n' +
-							''
+						' * <%= pkg.description %>\n' +
+						' * Author: <%= pkg.author %>\n' +
+						' * Site: http://<%= pkg.homepage %>/\n' +
+						' * Licensed under the BSD license\n' +
+						' */\n' +
+						''
 				},
 				src: 'src/jquery.hypher.js',
 				dest: 'dist/jquery.hypher.js',
@@ -36,13 +36,13 @@ module.exports = function(grunt) {
 				    banner: '/*!\n' +
 				    		' * <%= pkg.name %>\n' +
 				    		' * Version: <%= pkg.version %>\n' +
-							' * <%= pkg.description %>\n' +
-							' * Author: <%= pkg.author %>\n' +
-							' * Site: http://<%= pkg.homepage %>/\n' +
-							' * Licensed under the BSD license\n' +
-							' */\n' +
-							'',
-					report: 'gzip'
+						' * <%= pkg.description %>\n' +
+						' * Author: <%= pkg.author %>\n' +
+						' * Site: http://<%= pkg.homepage %>/\n' +
+						' * Licensed under the BSD license\n' +
+						' */\n' +
+						'',
+					//report: 'gzip'
 				},
 				files: {
 					'dist/jquery.hypher.min.js': ['src/jquery.hypher.js']
