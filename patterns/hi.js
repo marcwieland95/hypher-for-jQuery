@@ -1,7 +1,7 @@
 ﻿// For questions about the Hindi hyphenation patterns
 // ask Santhosh Thottingal (santhosh dot thottingal at gmail dot com)
 /*global Hyphenator*/
-Hyphenator.languages['hi'] = {
+Hyphenator.languages['hi'] = Hyphenator.languages['hi_IN'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: unescape("आअइईउऊऋऎएऐऒऔकगखघङचछजझञटठडढणतथदधनपफबभमयरलवशषसहळऴऱिीाुूृॆेॊाोैौ्ःं%u200D"),

@@ -2,7 +2,7 @@
 // For questions about the slovak hyphenation patterns
 // ask Zdenko Podobný (zdenop at gmail dot com)
 /*global Hyphenator*/
-Hyphenator.languages['sk'] = {
+Hyphenator.languages['sk'] = Hyphenator.languages['sk_SK'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "áäéíóôúýžčďľňšťŕ",

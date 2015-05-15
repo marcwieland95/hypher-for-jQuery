@@ -1,7 +1,7 @@
 // For questions about the romanian hyphenation patterns
 // ask irragal at gmail dot com
 /*global Hyphenator*/
-Hyphenator.languages['ro'] = {
+Hyphenator.languages['ro'] = Hyphenator.languages['ro_RO'] = {
     leftmin: 2,
     rightmin: 3,
     specialChars: "țîșă",

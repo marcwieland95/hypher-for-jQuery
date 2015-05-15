@@ -5,7 +5,7 @@
 // Corrected by: Liasovich Sviatlana <xelj.gjkz atbk dot ru>
 // License: LGPL
 /*global Hyphenator*/
-Hyphenator.languages['be'] = {
+Hyphenator.languages['be'] = Hyphenator.languages['be_BY'] = Hyphenator.languages['bel'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "'’абвгґдежзиійклмнопрстуўфхцчшьыэюя",

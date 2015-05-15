@@ -1,7 +1,7 @@
 ﻿// For questions about the Bengali hyphenation patterns
 // ask Santhosh Thottingal (santhosh dot thottingal at gmail dot com)
 /*global Hyphenator*/
-Hyphenator.languages['bn'] = {
+Hyphenator.languages['bn'] = Hyphenator.languages['bn_BD'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: unescape("আঅইঈউঊঋএঐঔকগখঘঙচছজঝঞটঠডঢণতথদধনপফবভমযরলশষসহিীাুূৃোোৈৌৗ্ঃং%u200D"),

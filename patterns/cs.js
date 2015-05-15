@@ -1,7 +1,7 @@
 ﻿// For questions about the Czech hyphenation patterns
 // ask Martin Hasoň (martin dot hason at gmail dot com)
 /*global Hyphenator*/
-Hyphenator.languages['cs'] = {
+Hyphenator.languages['cs'] = Hyphenator.languages['cs_CZ'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "ěščřžýáíéúůťď",

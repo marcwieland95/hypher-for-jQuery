@@ -1,7 +1,7 @@
 ﻿// For questions about the spanish hyphenation patterns
 // ask Luis Pabon (lpabon at metagrama dot es)
 /*global Hyphenator*/
-Hyphenator.languages['es'] = {
+Hyphenator.languages['es'] = Hyphenator.languages['es_ES'] = Hyphenator.languages['es_AR'] = Hyphenator.languages['es_CL'] = Hyphenator.languages['es_CO'] =Hyphenator.languages['es_MX'] = Hyphenator.languages['es_PE'] = Hyphenator.languages['es_PR'] = Hyphenator.languages['es_VE'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "áéíóúñ",

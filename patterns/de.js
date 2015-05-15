@@ -1,5 +1,5 @@
 /*global Hyphenator*/
-Hyphenator.languages['de'] = {
+Hyphenator.languages['de'] = Hyphenator.languages['de_DE'] = Hyphenator.languages['de_CH'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "äüößſ",

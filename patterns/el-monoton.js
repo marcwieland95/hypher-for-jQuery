@@ -1,5 +1,5 @@
 // Hyphenation patterns for Modern Monotonic Greek.
-// Created by Dimitrios Filippou with some ideas borrowed from 
+// Created by Dimitrios Filippou with some ideas borrowed from
 // Yannis Haralambous, Kostis Dryllerakis and Claudio Beccari.
 // From http://tug.org/svn/texhyphen/branches/ptex/hyph-utf8/tex/generic/hyph-utf8/patterns/tex/hyph-el-monoton.tex
 // Converted by Pablo Rodríguez (hyphenator at pragmata dot tk)

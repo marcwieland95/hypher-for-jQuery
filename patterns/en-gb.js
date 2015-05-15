@@ -1,7 +1,7 @@
 // The en-GB hyphenation patterns are retrieved from
 // http://tug_org/svn/texhyphen/trunk/collaboration/repository/hyphenator/
 /*global Hyphenator*/
-Hyphenator.languages['en-gb'] = {
+Hyphenator.languages['en'] = Hyphenator.languages['en_GB'] = {
     leftmin: 2,
     rightmin: 3,
     specialChars: "",

@@ -1,7 +1,7 @@
 ﻿// For questions about the Tamil hyphenation patterns
 // ask Santhosh Thottingal (santhosh dot thottingal at gmail dot com)
 /*global Hyphenator*/
-Hyphenator.languages['ta'] = {
+Hyphenator.languages['ta'] = Hyphenator.languages['ta_IN'] = Hyphenator.languages['ta_LK'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "அஆஇஈஉஊஎஏஐஒஓஔாிீுூெேைொோௌகஙசஜஞடணதநபமயரறலளழவஷஸஹ்னஂஃௗ",

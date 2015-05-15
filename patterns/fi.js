@@ -1,5 +1,5 @@
 ﻿/*global Hyphenator*/
-Hyphenator.languages['fi'] = {
+Hyphenator.languages['fi'] = Hyphenator.languages['fi_FI'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "öäå",

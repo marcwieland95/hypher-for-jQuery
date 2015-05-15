@@ -1,9 +1,9 @@
 ﻿/*global Hyphenator*/
-Hyphenator.languages['it'] = {
+Hyphenator.languages['it'] = Hyphenator.languages['it_IT'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "àéèìòù’'",
-    // The italian hyphenation patterns are retrieved from 
+    // The italian hyphenation patterns are retrieved from
     // http://www.ctan.org/tex-archive/language/hyphenation/ithyph.tex
     patterns: {
         2: "1b1c1d1f1g1h1j1k1l1m1n1p1q1r1t1v1w1x1z",

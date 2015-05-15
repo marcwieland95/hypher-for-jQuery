@@ -22,7 +22,8 @@ Zepto.js
 
 ###2. Include language pattern
 Make sure to include the right pattern for your desired languaga. You can use Hypher with multiple languages.
-The patterns are inside the patterns folder.
+The patterns are inside the patterns folder. Also be sure to set the language code either in the settings or embeed it into the "lang" attribute inside the HTML-tag.
+You can use the language code (ISO 639-1) or also the WordPress Locale, which mostly includes the country. All patterns are compatible with the following list, see [Internationalization](http://wpcentral.io/internationalization/).
 
 The engines pattern files are compatible to the file from Hyphenator.js. Because of this we have to init an empty array. Hypens won't work instead.(This will change in future)
 ``` html

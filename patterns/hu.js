@@ -1,7 +1,7 @@
 ﻿// For questions about the hungarian hyphenation patterns
 // ask Nagy Péter (nagy dot pite at gmail dot com)
 /*global Hyphenator*/
-Hyphenator.languages['hu'] = {
+Hyphenator.languages['hu'] = Hyphenator.languages['hu_HU'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "áéíóöőúüű",

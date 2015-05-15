@@ -1,7 +1,7 @@
 ﻿// For questions about the Oriya hyphenation patterns
 // ask Santhosh Thottingal (santhosh dot thottingal at gmail dot com)
 /*global Hyphenator*/
-Hyphenator.languages['or'] = {
+Hyphenator.languages['or'] = Hyphenator.languages['ory'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: unescape("ଆଅଇଈଉଊଋଏଐଔକଗଖଘଙଚଛଜଝଞଟଠଡଢଣତଥଦଧନପଫବଭମଯରଲଵଶଷସହଳିୀାୁୂୃୋୋୈୌୗ୍ଃଂ%u200D"),

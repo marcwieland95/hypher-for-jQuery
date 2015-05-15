@@ -1,7 +1,7 @@
 // The french hyphenation patterns are retrieved from
 // http://tug_org/svn/texhyphen/trunk/collaboration/repository/hyphenator/
 /*global Hyphenator*/
-Hyphenator.languages['fr'] = {
+Hyphenator.languages['fr'] = Hyphenator.languages['fr_FR'] = Hyphenator.languages['fr_BE'] = {
     leftmin: 2,
     rightmin: 3,
     specialChars: "àâçèéêîïôûœ’'",
