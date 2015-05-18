@@ -8,48 +8,32 @@
 	 */
 	function Hypher(parent, options, nodeValue, language) {
 
-		/*
-		if (options.lang != undefined) {
-			var language = options.lang;
-		} else {
-			var language = $('html').attr('lang');
-		}
 
-		console.log(language);
-		*/
-
-		/* Experimental */
-		/*
-		var jsonIssues = {};
+		// Auto load pattern files
 		$.ajax({
-				url: '../patterns/' + language + '.json',
-				async: false,
-				dataType: 'json',
-				success: function(data) {
-					jsonSettings = data;
-					console.log( jsonSettings );
-				}
+			url: '../patterns/' + language + '.json',
+			async: false, // all data have to be available to run
+			dataType: 'json',
+			cache: true,
+			success: function(data) {
+				jsonSettings = data;
+			}
 		});
-		*/
-
-		/*
-		$.getJSON('../patterns/' + language + '.json', function test(data) {
-
-		});
-		*/
+		
 
 		var defaults = {
 
 			// {String} Set the correct language for your content
 			//lang: $('html').attr('lang'),
 			lang: language,
+			// lang: jsonSettings.language,
 
 			// {Int} The minimum amount of characters on the left of the word
-			leftMin: Hyphenator.languages[language].leftmin,
+			leftMin: jsonSettings.leftmin,
 			//leftMin: jsonSettings.leftmin,
 
 			// {Int} The minimum amount of characters on the right of the word
-			rightMin: Hyphenator.languages[language].rightmin,
+			rightMin: jsonSettings.rightmin,
 			//rightMin: jsonSettings.rightmin,
 
 			// {Int} Minimumal word length to hyphenate
@@ -59,7 +43,7 @@
 			hypenChar: false,
 
 			// {String} Add exceptions as a comma-separated string - add your custom hypenation with |  (vertical bar)
-			exceptions: Hyphenator.languages[language].exceptions,
+			exceptions: jsonSettings.exceptions,
 			//exceptions: jsonSettings.exceptions,
 
 		};
@@ -67,7 +51,7 @@
 		this.options = $.extend({}, defaults, options);
 
 		// Set variables
-				i = 0;
+		i = 0;
 
 		 /**
 		 * @type {!number}
@@ -99,7 +83,7 @@
 		/**
 		 * @type {!Hypher.TrieNode}
 		 */
-		this.trie = this.createTrie(Hyphenator.languages[language].patterns); // this.trie = this.createTrie(language['patterns']);
+		this.trie = this.createTrie(jsonSettings.patterns[1]); // this.trie = this.createTrie(language['patterns']);
 		//this.trie = this.createTrie(jsonSettings.patterns);
 
 		// Return hypenation to replace TextNode
@@ -158,6 +142,8 @@
 				}
 			}
 		}
+
+		
 		return tree;
 	};
 
@@ -274,10 +260,7 @@
 
 
 	$.fn.hyphenate = function(options) {
-		/*
-		Hyphenator = [];
-		Hyphenator.languages = [];
-		*/
+
 		if (options === undefined) {
 			options = ''; // options can't be undefined or null
 		}
