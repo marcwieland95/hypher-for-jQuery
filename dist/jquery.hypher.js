@@ -16,19 +16,6 @@
 	 */
 	function Hypher(parent, options, nodeValue, language) {
 
-
-		// Auto load pattern files
-		$.ajax({
-			url: '../patterns/' + language + '.json',
-			async: false, // all data have to be available to run
-			dataType: 'json',
-			cache: true,
-			success: function(data) {
-				jsonSettings = data;
-			}
-		});
-		
-
 		var defaults = {
 
 			// {String} Set the correct language for your content
@@ -37,26 +24,51 @@
 			// lang: jsonSettings.language,
 
 			// {Int} The minimum amount of characters on the left of the word
-			leftMin: jsonSettings.leftmin,
-			//leftMin: jsonSettings.leftmin,
+			leftMin: false,
 
 			// {Int} The minimum amount of characters on the right of the word
-			rightMin: jsonSettings.rightmin,
-			//rightMin: jsonSettings.rightmin,
+			rightMin: false,
 
 			// {Int} Minimumal word length to hyphenate
 			minLength: 4,
 
-			// {Bol} This shows, where the words would hypenate - for debuging
+			// {String} Pattern-file path (viewed from root-folder)
+			path: '../patterns/',
+
+			// {Bol} By default the lang-patterns will be loaded automaticly. You can turn this off here and insert patterns by yourself
+			autoload: true,
+
+			// {Bol, String} This shows, where the words would hypenate - for debugging, add custom character inside string
 			hypenChar: false,
 
 			// {String} Add exceptions as a comma-separated string - add your custom hypenation with |  (vertical bar)
-			exceptions: jsonSettings.exceptions,
+			exceptions: false,
 			//exceptions: jsonSettings.exceptions,
 
 		};
 
 		this.options = $.extend({}, defaults, options);
+
+		//if (this.options.autoload) {
+			// Auto load pattern files
+			$.ajax({
+				url: this.options.path + language + '.json',
+				async: false, // all data have to be available to run
+				dataType: 'json',
+				cache: true,
+				success: function(data) {
+					jsonSettings = data;
+				}
+			});
+		/*
+		} else {
+			// Error message and exit
+			if (typeof jsonSettings === 'undefined') {
+				console.log('Pattern isn\'t included - autoload is turned off');
+			//	return false;
+			}
+		}
+		*/
 
 		// Set variables
 		i = 0;
@@ -66,17 +78,23 @@
 		 * @const
 		 */
 		this.leftMin = this.options.leftMin;
+		// Load content from patterns when noting set in settings
+		if (!this.leftMin) this.leftMin = jsonSettings.leftmin;
 
 		/**
 		 * @type {!number}
 		 * @const
 		 */
 		this.rightMin = this.options.rightMin;
+		// Load content from patterns when noting set in settings
+		if (!this.rightMin) this.rightMin = jsonSettings.rightmin;
 
 		/**
 		 * @type {!Object.<string, !Array.<string>>}
 		 */
 		this.exceptions = this.options.exceptions;
+		// Load content from patterns when noting set in settings
+		if (!this.exceptions) this.exceptions = jsonSettings.exceptions;
 
 		this.exceptionsObject = {};
 
@@ -151,7 +169,7 @@
 			}
 		}
 
-		
+
 		return tree;
 	};
 
@@ -181,11 +199,17 @@
 					words[i] += '\u200B';
 				}
 			} else if (words[i].length > minLength) {
+				// Hyphernate
+				if(!this.options.hypenChar) {
+					words[i] = this.hyphenate(words[i]).join('\u00AD');
+
 				// Allow preview for hyphenation
-				if(this.options.hypenChar) {
-						words[i] = this.hyphenate(words[i]).join('|');
+				} else if (typeof this.options.hypenChar === "string") {
+					// Custom character for hyphenation
+					words[i] = this.hyphenate(words[i]).join(this.options.hypenChar);
 				} else {
-					 words[i] = this.hyphenate(words[i]).join('\u00AD');
+					// Default hyphenation character - if debugging mode is on (hypenChar = true)
+					words[i] = this.hyphenate(words[i]).join('|');
 				}
 			}
 		}

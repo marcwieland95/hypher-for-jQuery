@@ -25,18 +25,6 @@ Make sure to include the right pattern for your desired languaga. You can use Hy
 The patterns are inside the patterns folder. Also be sure to set the language code either in the settings or embeed it into the "lang" attribute inside the HTML-tag.
 You can use the language code (ISO 639-1) or also the WordPress Locale, which mostly includes the country. All patterns are compatible with the following list, see [Internationalization](http://wpcentral.io/internationalization/).
 
-The engines pattern files are compatible to the file from Hyphenator.js. Because of this we have to init an empty array. Hypens won't work instead.(This will change in future)
-``` html
-<script>
-    // This is just a fix - will be removed in future versions
-    Hyphenator = [];
-    Hyphenator.languages = [];
-</script>
-
-<script src="patterns/en-us.js"></script>
-<script src="patterns/de.js"></script>
-```
-
 ###3. Include Hypher
 Include the main file after the language patterns. (`dist/jquery.hypher.js`)
 ``` html
@@ -72,10 +60,34 @@ Your available settings in Hypher
 | `leftMin` | patterns | Int | The minimum amount of characters on the left of the word
 | `rightMin` | patterns | Int | The minimum amount of characters on the right of the word
 | `minLength` | `4` | Int | Minimumal word length to hyphenate
-| `hypenChar` | `false` | Bol | This shows, where the words would hypenate - for debuging
+| `path` | `'../patterns/'` | String | Pattern-file path (viewed from root-folder)
+| `autoload` | `true` | Bol | By default the lang-patterns will be loaded automaticly. You can turn this off here and insert patterns by yourself.
+| `hypenChar` | `false` | Bol/String | This shows, where the words would hypenate - for debugging. You can also add a string with your preferred character. (Default is &#124;)
 | `exceptions` | patterns | String | Add exceptions as a comma-separated string - add your custom hypenation with &#124; (vertical bar)
 
+<!--
+###Include lang-patterns manually
+You're free to include language pattern by hand like below.
+Be sure to disable the autoload settings inside hyphers function call.
+
+``` html
+<script src="patterns/en-us.json"></script>
+<script src="patterns/de.json"></script>
+
+<script>
+    $('h3').hyphenate({
+        autoload: false,
+    });
+</script>
+```
+-->
+
 ##Changelog
+`0.3.0` / `xx.06.2015`
+- Autoload pattern files
+- Convert patterns into JSON-format
+- Minor tweaks inside settings
+
 `0.2.0` / `21.02.2015`
 - Add Zepto.js support
 - Add different settings for customization
