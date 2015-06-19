@@ -60,8 +60,8 @@ Your available settings in Hypher
 | `leftMin` | patterns | Int | The minimum amount of characters on the left of the word
 | `rightMin` | patterns | Int | The minimum amount of characters on the right of the word
 | `minLength` | `4` | Int | Minimumal word length to hyphenate
-| `path` | `'../patterns/'` | String | Pattern-file path (viewed from root-folder)
-| `autoload` | `true` | Bol | By default the lang-patterns will be loaded automaticly. You can turn this off here and insert patterns by yourself.
+| `path` | `'../patterns'` | String | Pattern-file path (viewed from included hypher.js file)
+<!--| `autoload` | `true` | Bol | By default the lang-patterns will be loaded automaticly. You can turn this off here and insert patterns by yourself.-->
 | `hypenChar` | `false` | Bol/String | This shows, where the words would hypenate - for debugging. You can also add a string with your preferred character. (Default is &#124;)
 | `exceptions` | patterns | String | Add exceptions as a comma-separated string - add your custom hypenation with &#124; (vertical bar)
 

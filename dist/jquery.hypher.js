@@ -32,11 +32,11 @@
 			// {Int} Minimumal word length to hyphenate
 			minLength: 4,
 
-			// {String} Pattern-file path (viewed from root-folder)
+			// {String} Pattern-file path (viewed from included hypher.js file)
 			path: '../patterns/',
 
 			// {Bol} By default the lang-patterns will be loaded automaticly. You can turn this off here and insert patterns by yourself
-			autoload: true,
+			//autoload: true,
 
 			// {Bol, String} This shows, where the words would hypenate - for debugging, add custom character inside string
 			hypenChar: false,
@@ -49,26 +49,40 @@
 
 		this.options = $.extend({}, defaults, options);
 
+		// Prepare url for request
+		if(this.options.path.substr(-1) === '/') {
+			this.options.path = this.options.path.substr(0, this.options.path.length - 1);
+		}
+		if(this.options.path !== '') {
+			this.options.path = this.options.path + '/';
+		}
+
 		//if (this.options.autoload) {
 			// Auto load pattern files
 			$.ajax({
-				url: this.options.path + language + '.json',
+				url: this.options.path + this.options.lang + '.json',
 				async: false, // all data have to be available to run
 				dataType: 'json',
 				cache: true,
 				success: function(data) {
 					jsonSettings = data;
+				},
+				error: function (xhr, ajaxOptions, thrownError) {
+					console.log('Pattern file can\'t be loaded - check path');
 				}
 			});
+
+		//} else {
+
 		/*
-		} else {
 			// Error message and exit
 			if (typeof jsonSettings === 'undefined') {
 				console.log('Pattern isn\'t included - autoload is turned off');
 			//	return false;
 			}
-		}
 		*/
+		//}
+
 
 		// Set variables
 		i = 0;
