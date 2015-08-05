@@ -28,13 +28,13 @@
 			path: '../patterns/',
 
 			// {Bol} By default the lang-patterns will be loaded automaticly. You can turn this off here and insert patterns by yourself
-			//autoload: true,
+			autoload: true,
 
 			// {Bol, String} This shows, where the words would hypenate - for debugging, add custom character inside string
 			hypenChar: false,
 
 			// {String} Add exceptions as a comma-separated string - add your custom hypenation with |  (vertical bar)
-			exceptions: false,
+			exceptions: null,
 			//exceptions: jsonSettings.exceptions,
 
 		};
@@ -49,31 +49,36 @@
 			this.options.path = this.options.path + '/';
 		}
 
-		//if (this.options.autoload) {
+		if (this.options.autoload) {
+
+			// Init empty array for pattern files
+			Hyphenator = [];
+			Hyphenator.languages = [];
+
 			// Auto load pattern files
 			$.ajax({
-				url: this.options.path + this.options.lang + '.json',
+				url: this.options.path + this.options.lang + '.js',
 				async: false, // all data have to be available to run
-				dataType: 'json',
+				dataType: 'script',
 				cache: true,
 				success: function(data) {
-					jsonSettings = data;
+					//pattern_settings = data;
+					//console.log(pattern_settings);
 				},
 				error: function (xhr, ajaxOptions, thrownError) {
 					console.log('Pattern file can\'t be loaded - check path');
 				}
 			});
 
-		//} else {
+		} else {
 
-		/*
 			// Error message and exit
-			if (typeof jsonSettings === 'undefined') {
+			if (typeof Hyphenator === 'undefined') {
 				console.log('Pattern isn\'t included - autoload is turned off');
 			//	return false;
 			}
-		*/
-		//}
+
+		}
 
 
 		// Set variables
@@ -83,24 +88,24 @@
 		 * @type {!number}
 		 * @const
 		 */
-		this.leftMin = this.options.leftMin;
+		//this.leftMin = this.options.leftMin;
 		// Load content from patterns when noting set in settings
-		if (!this.leftMin) this.leftMin = jsonSettings.leftmin;
+		if (!this.leftMin) this.leftMin = Hyphenator.languages[language].leftmin;
 
 		/**
 		 * @type {!number}
 		 * @const
 		 */
-		this.rightMin = this.options.rightMin;
+		//this.rightMin = this.options.rightMin;
 		// Load content from patterns when noting set in settings
-		if (!this.rightMin) this.rightMin = jsonSettings.rightmin;
+		if (!this.rightMin) this.rightMin = Hyphenator.languages[language].rightmin;
 
 		/**
 		 * @type {!Object.<string, !Array.<string>>}
 		 */
-		this.exceptions = this.options.exceptions;
+		//this.exceptions = this.options.exceptions;
 		// Load content from patterns when noting set in settings
-		if (!this.exceptions) this.exceptions = jsonSettings.exceptions;
+		if (!this.exceptions) this.exceptions = Hyphenator.languages[language].exceptions;
 
 		this.exceptionsObject = {};
 
@@ -115,7 +120,7 @@
 		/**
 		 * @type {!Hypher.TrieNode}
 		 */
-		this.trie = this.createTrie(jsonSettings.patterns[1]); // this.trie = this.createTrie(language['patterns']);
+		this.trie = this.trie = this.createTrie(Hyphenator.languages[language].patterns); // this.createTrie(jsonSettings.patterns[1]);
 		//this.trie = this.createTrie(jsonSettings.patterns);
 
 		// Return hypenation to replace TextNode
