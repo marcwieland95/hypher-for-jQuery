@@ -1,7 +1,9 @@
 ﻿// For questions about the dutch hyphenation patterns
 // ask Remco Bloemen (remco dot bloemen at gmail dot com)
+Hyphenator = [];
+Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['nl'] = Hyphenator.languages['nl_NL'] = Hyphenator.languages['nl_BE'] = {
+Hyphenator.languages['nl'] = Hyphenator.languages['nl_NL'] = Hyphenator.languages['nl-nl'] = Hyphenator.languages['nl_BE'] = Hyphenator.languages['nl-be'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "",

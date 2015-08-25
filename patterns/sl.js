@@ -1,7 +1,9 @@
 ﻿// For questions about the Slovenian hyphenation patterns
 // ask Mojca Miklavec (mojca dot miklavec dot lists at gmail dot com)
+Hyphenator = [];
+Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['sl'] = Hyphenator.languages['sl_SI'] = {
+Hyphenator.languages['sl'] = Hyphenator.languages['sl_SI'] = Hyphenator.languages['sl-si'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "čšž",

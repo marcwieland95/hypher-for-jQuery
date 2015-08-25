@@ -51,10 +51,6 @@
 
 		if (this.options.autoload) {
 
-			// Init empty array for pattern files
-			Hyphenator = [];
-			Hyphenator.languages = [];
-
 			// Auto load pattern files
 			$.ajax({
 				url: this.options.path + this.options.lang + '.js',

@@ -1,6 +1,8 @@
 // For questions about the serbian latin hyphenation patterns ask Sonja Keljević (sonja dot keljevic at gmail dot com)
+Hyphenator = [];
+Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['sr-latn'] = Hyphenator.languages['sr'] = Hyphenator.languages['sr_RS'] = {
+Hyphenator.languages['sr-latn'] = Hyphenator.languages['sr'] = Hyphenator.languages['sr_RS'] = Hyphenator.languages['sr-rs'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "žšđćč",

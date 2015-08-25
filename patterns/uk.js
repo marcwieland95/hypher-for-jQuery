@@ -1,5 +1,7 @@
 ﻿// For questions about the Ukrainian hyphenation patterns
 // ask Alexey Grekov (athens at ukr dot net)
+Hyphenator = [];
+Hyphenator.languages = [];
 /*global Hyphenator*/
 Hyphenator.languages['uk'] = {
     leftmin: 2,

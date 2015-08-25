@@ -1,5 +1,7 @@
 ﻿// For questions about the Telugu hyphenation patterns
 // ask Santhosh Thottingal (santhosh dot thottingal at gmail dot com)
+Hyphenator = [];
+Hyphenator.languages = [];
 /*global Hyphenator*/
 Hyphenator.languages['te'] = {
     leftmin: 2,

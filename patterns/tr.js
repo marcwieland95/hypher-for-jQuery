@@ -1,7 +1,9 @@
 // For questions about the turkish hyphenation patterns ask
 // Andreas Lappe nd at off-pist dot de
+Hyphenator = [];
+Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['tr'] = Hyphenator.languages['tr_TR'] = {
+Hyphenator.languages['tr'] = Hyphenator.languages['tr_TR'] = Hyphenator.languages['tr-tr'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "âıîöüûçğş",

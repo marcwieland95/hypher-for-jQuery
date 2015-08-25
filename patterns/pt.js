@@ -1,8 +1,10 @@
 ﻿// For questions about the portuguese hyphenation patterns
 // ask Lailson Bandeira (lailsonbm at gmail dot com)
 // based on LaTeX patterns in Portuguese, by Pedro J. de Rezende and J.Joao Dias Almeida (http://www.ctan.org/tex-archive/language/hyph-utf8/tex/generic/hyph-utf8/patterns/)
+Hyphenator = [];
+Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['pt'] = Hyphenator.languages['pt_PT'] = Hyphenator.languages['pt_BR'] = {
+Hyphenator.languages['pt'] = Hyphenator.languages['pt_PT'] = Hyphenator.languages['pt-pt'] = Hyphenator.languages['pt_BR'] = Hyphenator.languages['pt-br'] = {
     leftmin: 2,
     rightmin: 4,
     specialChars: "áéíóúãõàçâêô",

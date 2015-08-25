@@ -7,8 +7,10 @@
 //
 // The patterns were generated long ago by applying patgen to an Estonian dictionary;
 // a few patterns were added later manually to prohibit aa-bits type cases.
+Hyphenator = [];
+Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['et'] = Hyphenator.languages['et_EE'] = {
+Hyphenator.languages['et'] = Hyphenator.languages['et_EE'] = Hyphenator.languages['et-ee'] = {
     leftmin: 3,
     rightmin: 3,
     specialChars: "õüäöšž",

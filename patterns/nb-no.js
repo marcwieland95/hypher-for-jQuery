@@ -108,10 +108,10 @@
 // % nohyph2.tex -- created by Dag and a student; the present file,
 // %   nohyphbx.tex, is more extensive and is recommended.
 
-
-
+Hyphenator = [];
+Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['nb'] = Hyphenator.languages['no'] = Hyphenator.languages['nb_NO'] = Hyphenator.languages['nn_NO'] = {
+Hyphenator.languages['nb'] = Hyphenator.languages['no'] = Hyphenator.languages['nb_NO'] = Hyphenator.languages['nb-no'] = Hyphenator.languages['nn_NO'] = Hyphenator.languages['nn-no'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "æøå",

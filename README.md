@@ -61,18 +61,18 @@ Your available settings in Hypher
 | `rightMin` | patterns | Int | The minimum amount of characters on the right of the word
 | `minLength` | `4` | Int | Minimumal word length to hyphenate
 | `path` | `'../patterns'` | String | Pattern-file path (viewed from included hypher.js file)
-<!--| `autoload` | `true` | Bol | By default the lang-patterns will be loaded automaticly. You can turn this off here and insert patterns by yourself.-->
+| `autoload` | `true` | Bol | By default the lang-patterns will be loaded automaticly. You can turn this off here and insert patterns by yourself.
 | `hypenChar` | `false` | Bol/String | This shows, where the words would hypenate - for debugging. You can also add a string with your preferred character. (Default is &#124;)
 | `exceptions` | patterns | String | Add exceptions as a comma-separated string - add your custom hypenation with &#124; (vertical bar)
 
-<!--
+
 ###Include lang-patterns manually
 You're free to include language pattern by hand like below.
 Be sure to disable the autoload settings inside hyphers function call.
 
 ``` html
-<script src="patterns/en-us.json"></script>
-<script src="patterns/de.json"></script>
+<script src="patterns/en-us.js"></script>
+<script src="patterns/de.js"></script>
 
 <script>
     $('h3').hyphenate({
@@ -80,12 +80,11 @@ Be sure to disable the autoload settings inside hyphers function call.
     });
 </script>
 ```
--->
 
 ##Changelog
-`0.3.0` / `xx.06.2015`
+`0.3.0` / `26.08.2015`
 - Autoload pattern files
-- Convert patterns into JSON-format
+- Improve patterns locale
 - Minor tweaks inside settings
 
 `0.2.0` / `21.02.2015`

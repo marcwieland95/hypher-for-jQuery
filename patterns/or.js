@@ -1,5 +1,7 @@
 ﻿// For questions about the Oriya hyphenation patterns
 // ask Santhosh Thottingal (santhosh dot thottingal at gmail dot com)
+Hyphenator = [];
+Hyphenator.languages = [];
 /*global Hyphenator*/
 Hyphenator.languages['or'] = Hyphenator.languages['ory'] = {
     leftmin: 2,

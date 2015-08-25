@@ -1,7 +1,9 @@
 // For questions about the Lithuanian hyphenation patterns
 // ask Rogutės Sparnuotos (rogutes at googlemail dot com)
+Hyphenator = [];
+Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['lt'] = Hyphenator.languages['lt_LT'] = {
+Hyphenator.languages['lt'] = Hyphenator.languages['lt_LT'] = Hyphenator.languages['lt-lt'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "ščžįėūąęų",

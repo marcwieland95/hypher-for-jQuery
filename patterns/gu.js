@@ -1,7 +1,9 @@
 ﻿// For questions about the Gujarati hyphenation patterns
 // ask Santhosh Thottingal (santhosh dot thottingal at gmail dot com)
+Hyphenator = [];
+Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['gu'] = Hyphenator.languages['gu_IN'] = {
+Hyphenator.languages['gu'] = Hyphenator.languages['gu_IN'] = Hyphenator.languages['gu-in'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: unescape("આઅઇઈઉઊઋએઐઔકગખઘઙચછજઝઞટઠડઢણતથદધનપફબભમયરલવશષસહળિીાુૂૃેાોૈૌ્ઃં%u200D"),

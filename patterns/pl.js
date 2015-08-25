@@ -1,5 +1,7 @@
-﻿/*global Hyphenator*/
-Hyphenator.languages['pl'] = Hyphenator.languages['pl_PL'] = {
+﻿Hyphenator = [];
+Hyphenator.languages = [];
+/*global Hyphenator*/
+Hyphenator.languages['pl'] = Hyphenator.languages['pl_PL'] = Hyphenator.languages['pl-pl'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: unescape("ąćęłńóśźżਂ%u200D"),

@@ -1,7 +1,9 @@
 ﻿// For questions about the Panjabi hyphenation patterns
 // ask Santhosh Thottingal (santhosh dot thottingal at gmail dot com)
+Hyphenator = [];
+Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['pa'] = Hyphenator.languages['pa_IN'] = {
+Hyphenator.languages['pa'] = Hyphenator.languages['pa_IN'] = Hyphenator.languages['pa-in'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: unescape("ਆਅਇਈਉਊਏਐਔਕਗਖਘਙਚਛਜਝਞਟਠਡਢਣਤਥਦਧਨਪਫਬਭਮਯਰਲਵਸ਼ਸਹਲ਼ਿੀਾੁੂੇਾੋੈੌ੍ਃ%u0A02%u200D"),

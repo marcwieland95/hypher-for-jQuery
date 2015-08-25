@@ -1,7 +1,9 @@
 ﻿// Swedish hyphenation patterns by Jan Michael Rynning, jmr@nada.kth.se
 // Patterns modified for Hyphenator by Andreas Johansson, andreas@ibuypink.com
+Hyphenator = [];
+Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['sv'] = Hyphenator.languages['sv_SE'] = {
+Hyphenator.languages['sv'] = Hyphenator.languages['sv_SE'] = Hyphenator.languages['sv-se'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "åäöé",

@@ -1,7 +1,9 @@
 ﻿// For questions about the Malayalam hyphenation patterns
 // ask Santhosh Thottingal (santhosh dot thottingal at gmail dot com)
+Hyphenator = [];
+Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['ml'] = Hyphenator.languages['ml_IN'] = {
+Hyphenator.languages['ml'] = Hyphenator.languages['ml_IN'] = Hyphenator.languages['ml-in'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: unescape("അആഇഈഉഊഋൠഌൡഎഏഐഒഓഔാിീുൂൃെേൈൊോൌൗകഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫബഭമയരറലളഴവശഷസഹഃം്ൺൻർൽൾൿ%u200D"),

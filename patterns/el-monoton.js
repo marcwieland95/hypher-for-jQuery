@@ -3,6 +3,8 @@
 // Yannis Haralambous, Kostis Dryllerakis and Claudio Beccari.
 // From http://tug.org/svn/texhyphen/branches/ptex/hyph-utf8/tex/generic/hyph-utf8/patterns/tex/hyph-el-monoton.tex
 // Converted by Pablo Rodríguez (hyphenator at pragmata dot tk)
+Hyphenator = [];
+Hyphenator.languages = [];
 /*global Hyphenator*/
 Hyphenator.languages['el-monoton'] = Hyphenator.languages['el'] = {
     leftmin: 2,

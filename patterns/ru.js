@@ -2,8 +2,10 @@
 // crymos at yandex dot ru
 // Вопросы по русскоязычным таблицам переноса отправлять на адрес
 // crymos точка yandex собака ru
+Hyphenator = [];
+Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['ru'] = Hyphenator.languages['ru_RU'] = {
+Hyphenator.languages['ru'] = Hyphenator.languages['ru_RU'] = Hyphenator.languages['ru-ru'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: unescape("абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯਂ%u200D"),

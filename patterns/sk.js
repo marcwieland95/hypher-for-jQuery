@@ -1,8 +1,10 @@
 // Created based on sk-spell.sk.cx
 // For questions about the slovak hyphenation patterns
 // ask Zdenko Podobný (zdenop at gmail dot com)
+Hyphenator = [];
+Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['sk'] = Hyphenator.languages['sk_SK'] = {
+Hyphenator.languages['sk'] = Hyphenator.languages['sk_SK'] = Hyphenator.languages['sk-sk'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "áäéíóôúýžčďľňšťŕ",

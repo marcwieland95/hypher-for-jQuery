@@ -1,5 +1,7 @@
 // For questions about the Catalan hyphenation patterns
 // ask Jordi Rosell (jroselln at gmail dot com)
+Hyphenator = [];
+Hyphenator.languages = [];
 /*global Hyphenator*/
 Hyphenator.languages['ca'] = {
     leftmin: 3,
