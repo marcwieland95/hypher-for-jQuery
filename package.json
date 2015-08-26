@@ -3,11 +3,11 @@
   "version": "0.2.0",
   "description": "A fast and small JavaScript hyphenation engine for jQuery",
   "main": "dist/jquery.hypher.js",
-  "author": "@bramstein, @xxcram",
+  "author": "@bramstein, @marcwieland95",
   "homepage": "http://www.bramstein.com/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xxcram/hypher-for-jQuery.git"
+    "url": "https://github.com/marcwieland95/hypher-for-jQuery.git"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
