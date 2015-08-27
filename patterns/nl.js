@@ -3,7 +3,7 @@
 Hyphenator = [];
 Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['nl'] = Hyphenator.languages['nl_NL'] = Hyphenator.languages['nl-nl'] = Hyphenator.languages['nl_BE'] = Hyphenator.languages['nl-be'] = {
+Hyphenator.languages['nl'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "",

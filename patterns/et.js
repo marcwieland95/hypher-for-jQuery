@@ -10,7 +10,7 @@
 Hyphenator = [];
 Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['et'] = Hyphenator.languages['et_EE'] = Hyphenator.languages['et-ee'] = {
+Hyphenator.languages['et'] = {
     leftmin: 3,
     rightmin: 3,
     specialChars: "õüäöšž",

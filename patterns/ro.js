@@ -3,7 +3,7 @@
 Hyphenator = [];
 Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['ro'] = Hyphenator.languages['ro_RO'] = Hyphenator.languages['ro-ro'] = {
+Hyphenator.languages['ro'] = {
     leftmin: 2,
     rightmin: 3,
     specialChars: "țîșă",

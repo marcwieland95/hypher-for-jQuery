@@ -1,9 +1,9 @@
 # Hypher for jQuery
 
 A small and fast JavaScript hyphenation engine for jQuery (and also Zepto.js).
-The core is based on the code of Bram Stein (@bramstein), which is build for jQuery and Node.js, but has some pitfalls in the jQuery version.
+Hypher is the fastest javascipt based hypenation engine and is very lightweight. It's also very easy to use.
 
-We are in a stable beta version. So feel free to use it. We're looking forward to some improvements.
+The core is based on the code of Bram Stein (@bramstein), which is build for jQuery and Node.js, but has some pitfalls in the jQuery version.
 
 ##Setup
 Have a look inside the `@example` folder.
@@ -21,12 +21,12 @@ Zepto.js
 ```
 
 ###2. Include language pattern
-Make sure to include the right pattern for your desired languaga. You can use Hypher with multiple languages.
-The patterns are inside the patterns folder. Also be sure to set the language code either in the settings or embeed it into the "lang" attribute inside the HTML-tag.
+Make sure to include the right pattern for your desired language. You can use Hypher with multiple languages.
+The patterns are inside the patterns folder (easiest way to do: copy the whole patterns-folder in your project). Be sure to set the language code either in the settings or embeed it into the "lang" attribute inside the HTML-tag.
 You can use the language code (ISO 639-1) or also the WordPress Locale, which mostly includes the country. All patterns are compatible with the following list, see [Internationalization](http://wpcentral.io/internationalization/).
 
 ###3. Include Hypher
-Include the main file after the language patterns. (`dist/jquery.hypher.js`)
+Include the main file. (`dist/jquery.hypher.js`)
 ``` html
 <script src="dist/jquery.hypher.js"></script>
 ```
@@ -39,7 +39,7 @@ Select the text you'd like to hyphenate and then call the function.
 </script>
 ```
 
-… if you customize some options, do it like this
+… if you like to customize it a little, do it like this:
 
 ``` html
 <script>
@@ -52,7 +52,7 @@ Select the text you'd like to hyphenate and then call the function.
 ```
 
 ##Customization
-Your available settings in Hypher
+Your available settings in Hypher:
 
 | Option | Default | Type | Description
 |--------|---------|------|------------
@@ -82,9 +82,10 @@ Be sure to disable the autoload settings inside hyphers function call.
 ```
 
 ##Changelog
-`0.3.0` / `26.08.2015`
+`1.0.0` / `27.08.2015`
 - Autoload pattern files
 - Improve patterns locale
+- Register all pattern-files and add some logic to it
 - Minor tweaks inside settings
 
 `0.2.0` / `21.02.2015`

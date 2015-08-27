@@ -4,7 +4,7 @@
 Hyphenator = [];
 Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['pt'] = Hyphenator.languages['pt_PT'] = Hyphenator.languages['pt-pt'] = Hyphenator.languages['pt_BR'] = Hyphenator.languages['pt-br'] = {
+Hyphenator.languages['pt'] = {
     leftmin: 2,
     rightmin: 4,
     specialChars: "áéíóúãõàçâêô",

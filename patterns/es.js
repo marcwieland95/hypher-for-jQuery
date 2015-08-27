@@ -3,7 +3,7 @@
 Hyphenator = [];
 Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['es'] = Hyphenator.languages['es_ES'] = Hyphenator.languages['es-es'] = Hyphenator.languages['es_AR'] = Hyphenator.languages['es-ar'] = Hyphenator.languages['es_CL'] = Hyphenator.languages['es-cl'] = Hyphenator.languages['es_CO'] = Hyphenator.languages['es-co'] = Hyphenator.languages['es_MX'] = Hyphenator.languages['es-mx'] = Hyphenator.languages['es_PE'] = Hyphenator.languages['es-pe'] = Hyphenator.languages['es_PR'] = Hyphenator.languages['es-pr'] = Hyphenator.languages['es_VE'] = Hyphenator.languages['es-ve'] = {
+Hyphenator.languages['es'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "áéíóúñ",

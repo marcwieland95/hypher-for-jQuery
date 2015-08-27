@@ -1,10 +1,10 @@
 {
   "name": "hypher-for-jquery",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "A fast and small JavaScript hyphenation engine for jQuery",
   "main": "dist/jquery.hypher.js",
   "author": "@bramstein, @marcwieland95",
-  "homepage": "http://www.bramstein.com/",
+  "homepage": "http://www.bramstein.com/, http://marcwieland.ch",
   "repository": {
     "type": "git",
     "url": "https://github.com/marcwieland95/hypher-for-jQuery.git"

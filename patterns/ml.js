@@ -3,7 +3,7 @@
 Hyphenator = [];
 Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['ml'] = Hyphenator.languages['ml_IN'] = Hyphenator.languages['ml-in'] = {
+Hyphenator.languages['ml'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: unescape("അആഇഈഉഊഋൠഌൡഎഏഐഒഓഔാിീുൂൃെേൈൊോൌൗകഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫബഭമയരറലളഴവശഷസഹഃം്ൺൻർൽൾൿ%u200D"),

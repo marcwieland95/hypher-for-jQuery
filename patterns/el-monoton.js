@@ -6,7 +6,7 @@
 Hyphenator = [];
 Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['el-monoton'] = Hyphenator.languages['el'] = {
+Hyphenator.languages['el-monoton'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "αεηιουωϊϋάέήίόύώΐΰίάύέήόώβγκδζθλμπντξρσϲςφχψ'ʼ᾿’᾽",

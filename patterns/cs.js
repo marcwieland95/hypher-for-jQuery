@@ -3,7 +3,7 @@
 Hyphenator = [];
 Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['cs'] = Hyphenator.languages['cs_CZ'] = Hyphenator.languages['cs-cz'] = {
+Hyphenator.languages['cs'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "ěščřžýáíéúůťď",

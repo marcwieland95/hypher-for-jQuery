@@ -1,7 +1,7 @@
 Hyphenator = [];
 Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['de'] = Hyphenator.languages['de_DE'] = Hyphenator.languages['de_CH'] = Hyphenator.languages['de-de'] = Hyphenator.languages['de-ch'] = {
+Hyphenator.languages['de'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "äüößſ",

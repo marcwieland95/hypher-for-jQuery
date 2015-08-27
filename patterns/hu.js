@@ -3,7 +3,7 @@
 Hyphenator = [];
 Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['hu'] = Hyphenator.languages['hu_HU'] = Hyphenator.languages['hu-hu'] = {
+Hyphenator.languages['hu'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "áéíóöőúüű",

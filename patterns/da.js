@@ -1,7 +1,7 @@
 ﻿Hyphenator = [];
 Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['da'] = Hyphenator.languages['da_DK'] = Hyphenator.languages['da-dk'] = {
+Hyphenator.languages['da'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "æøå",

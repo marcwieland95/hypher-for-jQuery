@@ -1,7 +1,7 @@
 ﻿Hyphenator = [];
 Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['it'] = Hyphenator.languages['it_IT'] = Hyphenator.languages['it-it'] = {
+Hyphenator.languages['it'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "àéèìòù’'",

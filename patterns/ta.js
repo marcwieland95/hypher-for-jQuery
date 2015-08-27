@@ -3,7 +3,7 @@
 Hyphenator = [];
 Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['ta'] = Hyphenator.languages['ta_IN'] = Hyphenator.languages['ta-in'] = Hyphenator.languages['ta_LK'] = Hyphenator.languages['ta-lk'] = {
+Hyphenator.languages['ta'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "அஆஇஈஉஊஎஏஐஒஓஔாிீுூெேைொோௌகஙசஜஞடணதநபமயரறலளழவஷஸஹ்னஂஃௗ",

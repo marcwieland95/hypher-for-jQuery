@@ -3,7 +3,7 @@
 Hyphenator = [];
 Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['lt'] = Hyphenator.languages['lt_LT'] = Hyphenator.languages['lt-lt'] = {
+Hyphenator.languages['lt'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: "ščžįėūąęų",

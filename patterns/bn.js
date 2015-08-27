@@ -3,7 +3,7 @@
 Hyphenator = [];
 Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['bn'] = Hyphenator.languages['bn_BD'] = Hyphenator.languages['bn-bd'] = {
+Hyphenator.languages['bn'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: unescape("আঅইঈউঊঋএঐঔকগখঘঙচছজঝঞটঠডঢণতথদধনপফবভমযরলশষসহিীাুূৃোোৈৌৗ্ঃং%u200D"),

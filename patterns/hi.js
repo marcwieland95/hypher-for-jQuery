@@ -3,7 +3,7 @@
 Hyphenator = [];
 Hyphenator.languages = [];
 /*global Hyphenator*/
-Hyphenator.languages['hi'] = Hyphenator.languages['hi_IN'] = Hyphenator.languages['hi-in'] = {
+Hyphenator.languages['hi'] = {
     leftmin: 2,
     rightmin: 2,
     specialChars: unescape("आअइईउऊऋऎएऐऒऔकगखघङचछजझञटठडढणतथदधनपफबभमयरलवशषसहळऴऱिीाुूृॆेॊाोैौ्ःं%u200D"),

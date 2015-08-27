@@ -1,9 +1,9 @@
 /*!
  * hypher-for-jquery
- * Version: 0.2.0
+ * Version: 1.0.0
  * A fast and small JavaScript hyphenation engine for jQuery
  * Author: @bramstein, @marcwieland95
- * Site: http://http://www.bramstein.com//
+ * Site: http://http://www.bramstein.com/, http://marcwieland.ch/
  * Licensed under the BSD license
  */
 ;(function($) {
@@ -13,9 +13,11 @@
 	 * @param {Object} parent
 	 * @param {Object} options
 	 * @param {Object} nodeValue
+	 * @param {String} language
 	 */
 	function Hypher(parent, options, nodeValue, language) {
 
+		// Set default options
 		var defaults = {
 
 			// {String} Set the correct language for your content
@@ -44,7 +46,71 @@
 
 		};
 
+		// Merge default with user option
 		this.options = $.extend({}, defaults, options);
+
+		// Asign pattern code to locale
+	    this.langCode = {
+	    	// Register every pattern file here
+	    	// 'pattern-filename': ['locale', 'locale', etc.]
+	        'be': [ 'be', 'be_BY', 'be-by', 'bel' ], // Belarusian
+	        'bn': [ 'bn', 'bn_BD', 'bn-bd' ], // Bengali
+	        'ca': [ 'ca' ], // Catalan
+	        'cs': [ 'cs', 'cs_CZ', 'cs-cz' ], // Czech
+	        'da': [ 'da', 'da_DK', 'da-dk' ], // Danish
+	        'de': [ 'de', 'de_DE', 'de_CH', 'de_AT', 'de-de', 'de-ch', 'de-at' ], // German
+	        'el-monoton': [ 'el', 'el-monoton' ], // Modern Monotonic Greek
+	        'el-polyton': [ 'el-polyton' ], // Modern Polytonic Greek
+	        'en-gb': [ 'en_GB', 'en-gb' ], // British English
+	        'en-us': [ 'en', 'en_US', 'en-us' ], // US English
+	        'eo': [ 'eo' ],
+	        'es': [ 'es', 'es_ES', 'es-es' ], // Spanish
+	        'et': [ 'et', 'et_EE', 'et-ee' ], // Estonian
+	        'fi': [ 'fi', 'fi_FI', 'fi-fi' ], // Finish
+	        'fr': [ 'fr', 'fr_FR', 'fr-fr', 'fr_BE', 'fr-be' ], // French
+	        'grc': [ 'grc' ], // Ancient Greek
+	        'gu': [ 'gu', 'gu_IN', 'gu-in' ], // Gujarati
+	        'hi': [ 'hi', 'hi_IN', 'hi-in' ], // Hindi
+	        'hu': [ 'hu', 'hu_HU', 'hu-hu' ], // Hungarian
+	        'hy': [ 'hy' ], // Armenian
+	        'it': [ 'it', 'it_IT', 'it-it' ], // Italian
+	        'kn': [ 'kn' ], // Kannada
+	        'la': [ 'la' ], // Latin
+	        'lt': [ 'lt', 'lt_LT', 'lt-lt' ], // Lithuanian
+	        'lv': [ 'lv' ], // Latvian
+	        'ml': [ 'ml', 'ml_IN', 'ml-in' ], // Malayalam
+	        'nb-no': [ 'nb', 'no', 'nb_NO', 'nb-no', 'nn_NO', 'nn-no' ], // Norwegian
+	        'nl': [ 'nl', 'nl_NL', 'nl-nl', 'nl_BE', 'nl-be' ], // Dutch
+	        'or': [ 'or', 'ory' ], // Oriya
+	        'pa': [ 'pa', 'pa_IN', 'pa-in' ], // Panjabi
+	        'pl': [ 'pl', 'pl_PL', 'pl-pl' ], // Polish
+	        'pt': [ 'pt', 'pt_PT', 'pt-pt', 'pt_BR', 'pt-br' ], // Portuguese
+	        'ro': [ 'ro', 'ro_RO', 'ro-ro' ], // Romanian
+	        'ru': [ 'ru', 'ru_RU', 'ru-ru' ], // Russian
+	        'sk': [ 'sk', 'sk_SK', 'sk-sk' ], // Slovak
+	        'sl': [ 'sl', 'sl_SI', 'sl-si' ], // Slovenian
+	        'sr-cyrl': [ 'sr-cyrl' ], // Serbian cyrillic
+	        'sr-latn': [ 'sr-latn', 'sr', 'sr_RS', 'sr-rs' ], // Serbian latin
+	        'sv': [ 'sv', 'sv_SE', 'sv-se' ], // Swedish
+	        'ta': [ 'ta', 'ta_IN', 'ta-in', 'ta_LK', 'ta-lk' ], // Tamil
+	        'te': [ 'te' ], // Telugu
+	        'tr': [ 'tr', 'tr_TR', 'tr-tr' ], // Turkish
+	        'uk': [ 'uk', 'uk_UK', 'uk-uk' ], // Ukrainian
+	    };
+
+	    Hypher.prototype.include = function(arr,obj) {
+		    return (arr.indexOf(obj) != -1);
+		};
+
+		// Search for locale and set proper pattern file
+		for (var key in this.langCode) {
+			if (this.langCode.hasOwnProperty(key)) {
+		    	if (this.include(this.langCode[key], this.options.lang)) {
+		    		this.options.lang = key; // set current pattern code
+		    		break;
+		    	}
+		  	}
+		}
 
 		// Prepare url for request
 		if(this.options.path.substr(-1) === '/') {
@@ -63,7 +129,7 @@
 				dataType: 'script',
 				cache: true,
 				error: function (xhr, ajaxOptions, thrownError) {
-					console.log('Pattern file can\'t be loaded - check path');
+					console.log('Pattern file can\'t be loaded - check path (' + this.options.path + ')');
 				}
 			});
 
@@ -78,7 +144,7 @@
 
 		// Autoload is on, but pattern still isn't available
 		if (typeof Hyphenator === 'undefined') {
-			console.log('Pattern isn\'t included - maybe pattern file doesn\'t exists or path linkes to wrong directory wrong');
+			console.log('Pattern isn\'t included - maybe pattern file doesn\'t exists or path linkes to wrong directory - check path (' + this.options.path + ')');
 		}
 
 		// Set variables
@@ -89,20 +155,20 @@
 		 * @const
 		 */
 		// Load content from patterns when noting set in settings
-		if (!this.options.leftMin) this.options.leftMin = Hyphenator.languages[language].leftmin;
+		if (!this.options.leftMin) this.options.leftMin = Hyphenator.languages[this.options.lang].leftmin;
 
 		/**
 		 * @type {!number}
 		 * @const
 		 */
 		// Load content from patterns when noting set in settings
-		if (!this.options.rightMin) this.options.rightMin = Hyphenator.languages[language].rightmin;
+		if (!this.options.rightMin) this.options.rightMin = Hyphenator.languages[this.options.lang].rightmin;
 
 		/**
 		 * @type {!Object.<string, !Array.<string>>}
 		 */
 		// Load content from patterns when noting set in settings
-		if (!this.options.exceptions) this.options.exceptions = Hyphenator.languages[language].exceptions;
+		if (!this.options.exceptions) this.options.exceptions = Hyphenator.languages[this.options.lang].exceptions;
 
 		this.exceptionsObject = {};
 
@@ -117,7 +183,7 @@
 		/**
 		 * @type {!Hypher.TrieNode}
 		 */
-		this.trie = this.createTrie(Hyphenator.languages[language].patterns);
+		this.trie = this.createTrie(Hyphenator.languages[this.options.lang].patterns);
 
 		// Return hypenation to replace TextNode
 		this.hypens = this.hyphenateText(nodeValue);
@@ -295,7 +361,6 @@
 		if (options.lang !== undefined) {
 			language = options.lang;
 		} else {
-			//language = $('html').attr('lang');
 			language = document.getElementsByTagName('html')[0].getAttribute('lang');
 		}
 
