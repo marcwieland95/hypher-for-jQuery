@@ -41,53 +41,56 @@
 		// Merge default with user option
 		this.options = $.extend({}, defaults, options);
 
+		// Convert lang-code to lowercase
+		this.options.lang = this.options.lang.toLowerCase();
+
 		// Asign pattern code to locale
 	    this.langCode = {
 	    	// Register every pattern file here
 	    	// 'pattern-filename': ['locale', 'locale', etc.]
-	        'be': [ 'be', 'be_BY', 'be-by', 'bel' ], // Belarusian
-	        'bn': [ 'bn', 'bn_BD', 'bn-bd' ], // Bengali
+	        'be': [ 'be', 'be_by', 'be-by', 'bel' ], // Belarusian
+	        'bn': [ 'bn', 'bn_bd', 'bn-bd' ], // Bengali
 	        'ca': [ 'ca' ], // Catalan
-	        'cs': [ 'cs', 'cs_CZ', 'cs-cz' ], // Czech
-	        'da': [ 'da', 'da_DK', 'da-dk' ], // Danish
-	        'de': [ 'de', 'de_DE', 'de_CH', 'de_AT', 'de-de', 'de-ch', 'de-at' ], // German
+	        'cs': [ 'cs', 'cs_cz', 'cs-cz' ], // Czech
+	        'da': [ 'da', 'da_dk', 'da-dk' ], // Danish
+	        'de': [ 'de', 'de_de', 'de-de', 'de_ch', 'de-ch', 'de_at', 'de-at' ], // German
 	        'el-monoton': [ 'el', 'el-monoton' ], // Modern Monotonic Greek
 	        'el-polyton': [ 'el-polyton' ], // Modern Polytonic Greek
-	        'en-gb': [ 'en_GB', 'en-gb' ], // British English
-	        'en-us': [ 'en', 'en_US', 'en-us' ], // US English
+	        'en-gb': [ 'en_gb', 'en-gb' ], // British English
+	        'en-us': [ 'en', 'en_us', 'en-us' ], // US English
 	        'eo': [ 'eo' ],
-	        'es': [ 'es', 'es_ES', 'es-es' ], // Spanish
-	        'et': [ 'et', 'et_EE', 'et-ee' ], // Estonian
-	        'fi': [ 'fi', 'fi_FI', 'fi-fi' ], // Finish
-	        'fr': [ 'fr', 'fr_FR', 'fr-fr', 'fr_BE', 'fr-be' ], // French
+	        'es': [ 'es', 'es_es', 'es-es' ], // Spanish
+	        'et': [ 'et', 'et_ee', 'et-ee' ], // Estonian
+	        'fi': [ 'fi', 'fi_fi', 'fi-fi' ], // Finish
+	        'fr': [ 'fr', 'fr_fr', 'fr-fr', 'fr_be', 'fr-be' ], // French
 	        'grc': [ 'grc' ], // Ancient Greek
-	        'gu': [ 'gu', 'gu_IN', 'gu-in' ], // Gujarati
-	        'hi': [ 'hi', 'hi_IN', 'hi-in' ], // Hindi
-	        'hu': [ 'hu', 'hu_HU', 'hu-hu' ], // Hungarian
+	        'gu': [ 'gu', 'gu_in', 'gu-in' ], // Gujarati
+	        'hi': [ 'hi', 'hi_in', 'hi-in' ], // Hindi
+	        'hu': [ 'hu', 'hu_hu', 'hu-hu' ], // Hungarian
 	        'hy': [ 'hy' ], // Armenian
-	        'it': [ 'it', 'it_IT', 'it-it' ], // Italian
+	        'it': [ 'it', 'it_it', 'it-it' ], // Italian
 	        'kn': [ 'kn' ], // Kannada
 	        'la': [ 'la' ], // Latin
-	        'lt': [ 'lt', 'lt_LT', 'lt-lt' ], // Lithuanian
+	        'lt': [ 'lt', 'lt_lt', 'lt-lt' ], // Lithuanian
 	        'lv': [ 'lv' ], // Latvian
-	        'ml': [ 'ml', 'ml_IN', 'ml-in' ], // Malayalam
-	        'nb-no': [ 'nb', 'no', 'nb_NO', 'nb-no', 'nn_NO', 'nn-no' ], // Norwegian
-	        'nl': [ 'nl', 'nl_NL', 'nl-nl', 'nl_BE', 'nl-be' ], // Dutch
+	        'ml': [ 'ml', 'ml_in', 'ml-in' ], // Malayalam
+	        'nb-no': [ 'nb', 'no', 'nb_no', 'nb-no', 'nn_no', 'nn-no' ], // Norwegian
+	        'nl': [ 'nl', 'nl_nl', 'nl-nl', 'nl_be', 'nl-be' ], // Dutch
 	        'or': [ 'or', 'ory' ], // Oriya
-	        'pa': [ 'pa', 'pa_IN', 'pa-in' ], // Panjabi
-	        'pl': [ 'pl', 'pl_PL', 'pl-pl' ], // Polish
-	        'pt': [ 'pt', 'pt_PT', 'pt-pt', 'pt_BR', 'pt-br' ], // Portuguese
-	        'ro': [ 'ro', 'ro_RO', 'ro-ro' ], // Romanian
-	        'ru': [ 'ru', 'ru_RU', 'ru-ru' ], // Russian
-	        'sk': [ 'sk', 'sk_SK', 'sk-sk' ], // Slovak
-	        'sl': [ 'sl', 'sl_SI', 'sl-si' ], // Slovenian
+	        'pa': [ 'pa', 'pa_in', 'pa-in' ], // Panjabi
+	        'pl': [ 'pl', 'pl_pl', 'pl-pl' ], // Polish
+	        'pt': [ 'pt', 'pt_pt', 'pt-pt', 'pt_br', 'pt-br' ], // Portuguese
+	        'ro': [ 'ro', 'ro_ro', 'ro-ro' ], // Romanian
+	        'ru': [ 'ru', 'ru_ru', 'ru-ru' ], // Russian
+	        'sk': [ 'sk', 'sk_sk', 'sk-sk' ], // Slovak
+	        'sl': [ 'sl', 'sl_si', 'sl-si' ], // Slovenian
 	        'sr-cyrl': [ 'sr-cyrl' ], // Serbian cyrillic
-	        'sr-latn': [ 'sr-latn', 'sr', 'sr_RS', 'sr-rs' ], // Serbian latin
-	        'sv': [ 'sv', 'sv_SE', 'sv-se' ], // Swedish
-	        'ta': [ 'ta', 'ta_IN', 'ta-in', 'ta_LK', 'ta-lk' ], // Tamil
+	        'sr-latn': [ 'sr-latn', 'sr', 'sr_rs', 'sr-rs' ], // Serbian latin
+	        'sv': [ 'sv', 'sv_se', 'sv-se' ], // Swedish
+	        'ta': [ 'ta', 'ta_in', 'ta-in', 'ta_lk', 'ta-lk' ], // Tamil
 	        'te': [ 'te' ], // Telugu
-	        'tr': [ 'tr', 'tr_TR', 'tr-tr' ], // Turkish
-	        'uk': [ 'uk', 'uk_UK', 'uk-uk' ], // Ukrainian
+	        'tr': [ 'tr', 'tr_tr', 'tr-tr' ], // Turkish
+	        'uk': [ 'uk', 'uk_uk', 'uk-uk' ], // Ukrainian
 	    };
 
 	    Hypher.prototype.include = function(arr,obj) {
