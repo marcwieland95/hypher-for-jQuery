@@ -64,6 +64,7 @@ Your available settings in Hypher:
 | `autoload` | `true` | Bol | By default the lang-patterns will be loaded automaticly. You can turn this off here and insert patterns by yourself.
 | `hypenChar` | `false` | Bol/String | This shows, where the words would hypenate - for debugging. You can also add a string with your preferred character. (Default is &#124;)
 | `exceptions` | patterns | String | Add exceptions as a comma-separated string - add your custom hypenation with &#124; (vertical bar)
+| `devMode` | `false` | Bol | When set to true, options are shown as objects in console - for debugging.
 
 
 ###Include lang-patterns manually
@@ -82,6 +83,10 @@ Be sure to disable the autoload settings inside hyphers function call.
 ```
 
 ##Changelog
+`1.0.1` / `05.01.2016`
+- Remove case sensitive validation for language (de-CH is now equal to de-ch)
+- Return options in console when option 'devMode' set to true - for debugging
+
 `1.0.0` / `27.08.2015`
 - Autoload pattern files
 - Improve patterns locale
@@ -101,6 +106,7 @@ Be sure to disable the autoload settings inside hyphers function call.
 Hypher is licensed under the three clause BSD license (see BSD.txt.)
 
 ## See also
+* [Hypher](https://github.com/bramstein/hypher)
 * [Hyphenator.js](http://code.google.com/p/hyphenator/)
 
 ## Contributors

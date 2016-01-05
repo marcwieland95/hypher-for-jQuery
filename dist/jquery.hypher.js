@@ -1,12 +1,15 @@
 /*!
  * hypher-for-jquery
- * Version: 1.0.0
+ * Version: 1.0.1
  * A fast and small JavaScript hyphenation engine for jQuery
  * Author: @bramstein, @marcwieland95
  * Site: http://http://www.bramstein.com/, http://marcwieland.ch/
  * Licensed under the BSD license
  */
 ;(function($) {
+
+	var pluginName = 'Hypher for jQuery';
+	var pluginVersion = '1.0.1';
 
 	/**
 	 * Hyphenation Constructor
@@ -43,6 +46,9 @@
 
 			// {String} Add exceptions as a comma-separated string - add your custom hypenation with |  (vertical bar)
 			exceptions: null,
+
+			// {Bol} When set to true, options are shown as objects in console - for debugging
+			devMode: false,
 
 		};
 
@@ -147,7 +153,7 @@
 
 		// Autoload is on, but pattern still isn't available
 		if (typeof Hyphenator === 'undefined') {
-			console.log('Pattern isn\'t included - maybe pattern file doesn\'t exists or path linkes to wrong directory - check path (' + this.options.path + ')');
+			console.log('Pattern isn\'t included - maybe pattern file doesn\'t exists or path linked to the wrong directory - check path (' + this.options.path + ')');
 		}
 
 		// Set variables
@@ -190,6 +196,9 @@
 
 		// Return hypenation to replace TextNode
 		this.hypens = this.hyphenateText(nodeValue);
+
+		// Return global settings
+		this.globalSettings = this.options;
 
 	}
 
@@ -367,11 +376,24 @@
 			language = document.getElementsByTagName('html')[0].getAttribute('lang');
 		}
 
-		return this.each(function () {
+		// Set number of execution
+		var exTimes = this.length;
+
+		return this.each(function (index) {
 			var i = 0, len = this.childNodes.length;
 			for (; i < len; i += 1) {
 				if (this.childNodes[i].nodeType === 3) {
-					this.childNodes[i].nodeValue = new Hypher( $(this), options, this.childNodes[i].nodeValue, language ).hypens;
+					var CacheHypher = new Hypher( $(this), options, this.childNodes[i].nodeValue, language );
+					this.childNodes[i].nodeValue = CacheHypher.hypens;
+
+					// Run only on last execution
+					if (index == exTimes - 1) {
+						// Return infos for devs
+						if (CacheHypher.globalSettings.devMode) {
+							console.log(pluginName + ' - ' + pluginVersion);
+							console.log(CacheHypher.globalSettings);
+						}
+          			}
 				}
 			}
 		});
