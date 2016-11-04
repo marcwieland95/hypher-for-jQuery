@@ -1,14 +1,29 @@
 {
   "name": "hypher-for-jquery",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A fast and small JavaScript hyphenation engine for jQuery",
   "main": "dist/jquery.hypher.js",
-  "author": "@bramstein, @marcwieland95",
-  "homepage": "http://www.bramstein.com/, http://marcwieland.ch",
+  "author": [
+    {
+      "name": "Bram Stein (@bramstein)",
+      "url": "http://www.bramstein.com/"
+    },
+    {
+      "name": "Marc Wieland (@marcwieland95)",
+      "url": "http://marcwieland.name/"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/marcwieland95/hypher-for-jQuery.git"
   },
+  "keywords": [
+    "hyphenation",
+    "hypher",
+    "hypher.js",
+    "zepto",
+    "jquery"
+  ],
   "devDependencies": {
     "grunt": "~0.4.2",
     "load-grunt-tasks": "~0.2.1",

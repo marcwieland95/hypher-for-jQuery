@@ -1,5 +1,5 @@
 // The en-GB hyphenation patterns are retrieved from
-// http://tug_org/svn/texhyphen/trunk/collaboration/repository/hyphenator/
+// http://tug.org/svn/texhyphen/trunk/collaboration/repository/hyphenator/
 Hyphenator = [];
 Hyphenator.languages = [];
 /*global Hyphenator*/

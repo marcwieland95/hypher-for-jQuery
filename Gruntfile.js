@@ -19,9 +19,7 @@ module.exports = function(grunt) {
 				    		' * <%= pkg.name %>\n' +
 				    		' * Version: <%= pkg.version %>\n' +
 							' * <%= pkg.description %>\n' +
-							' * Author: <%= pkg.author %>\n' +
-							' * Site: http://<%= pkg.homepage %>/\n' +
-							' * Licensed under the BSD license\n' +
+							' * Author: Bram Stein & Marc Wieland\n' +
 							' */\n' +
 							''
 				},
@@ -37,9 +35,7 @@ module.exports = function(grunt) {
 				    		' * <%= pkg.name %>\n' +
 				    		' * Version: <%= pkg.version %>\n' +
 							' * <%= pkg.description %>\n' +
-							' * Author: <%= pkg.author %>\n' +
-							' * Site: http://<%= pkg.homepage %>/\n' +
-							' * Licensed under the BSD license\n' +
+							' * Author: Bram Stein & Marc Wieland\n' +
 							' */\n' +
 							'',
 							//report: 'gzip'

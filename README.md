@@ -11,9 +11,10 @@ Have a look inside the `@example` folder.
 ###1. Include jQuery or Zepto.js
 This hyphenation engine is mostly written in plain JavaScript, but also needs jQuery or Zepto.js.
 
-jQuery 1.x or 2.x
+jQuery 1.x, 2.x or 3.x
+Because it's just an wrapper for jQuery. The web-plugin works with every version of jQuery. The core is written in plain javascipt.
 ``` html
-<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 ```
 Zepto.js
 ``` html
@@ -83,6 +84,10 @@ Be sure to disable the autoload settings inside hyphers function call.
 ```
 
 ##Changelog
+`1.0.2` / `04.11.2016`
+- Update to jQuery 3 and test it
+- Edit metadata
+
 `1.0.1` / `05.01.2016`
 - Remove case sensitive validation for language (de-CH is now equal to de-ch)
 - Return options in console when option 'devMode' set to true - for debugging

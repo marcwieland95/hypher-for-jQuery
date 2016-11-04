@@ -1,10 +1,8 @@
 /*!
  * hypher-for-jquery
- * Version: 1.0.1
+ * Version: 1.0.2
  * A fast and small JavaScript hyphenation engine for jQuery
- * Author: @bramstein, @marcwieland95
- * Site: http://http://www.bramstein.com/, http://marcwieland.ch/
- * Licensed under the BSD license
+ * Author: Bram Stein & Marc Wieland
  */
 ;(function($) {
 
