@@ -1,6 +1,6 @@
 {
   "name": "hypher-for-jquery",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A fast and small JavaScript hyphenation engine for jQuery",
   "main": "dist/jquery.hypher.js",
   "author": [

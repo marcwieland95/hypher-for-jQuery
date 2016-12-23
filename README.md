@@ -5,6 +5,10 @@ Hypher is the fastest javascipt based hypenation engine and is very lightweight.
 
 The core is based on the code of Bram Stein (@bramstein), which is build for jQuery and Node.js, but has some pitfalls in the jQuery version.
 
+##Requirements
+
+- Apache/NGINX (the script needs to do some HTTP Requests)
+
 ##Setup
 Have a look inside the `@example` folder.
 
@@ -84,6 +88,10 @@ Be sure to disable the autoload settings inside hyphers function call.
 ```
 
 ##Changelog
+`1.0.3` / `23.12.2016`
+- Fix hyphenating all uppercase text
+- Fix inconsistent soft hyphen handling.
+
 `1.0.2` / `04.11.2016`
 - Update to jQuery 3 and test it
 - Edit metadata
