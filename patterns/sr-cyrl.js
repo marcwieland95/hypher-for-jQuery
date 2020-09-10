@@ -1,6 +1,8 @@
 // For questions about the serbian cyrillic hyphenation patterns ask Milan Gurjanov (milan dot gurjanov at enterits dot rs)
-Hyphenator = [];
-Hyphenator.languages = [];
+if (typeof Hyphenator === 'undefined') {
+    Hyphenator = [];
+    Hyphenator.languages = [];
+}
 /*global Hyphenator*/
 Hyphenator.languages['sr-cyrl'] = {
 	leftmin : 2,

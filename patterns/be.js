@@ -4,8 +4,10 @@
 // Created by: Alex Buloichik <alex73mail at gmail dot com>
 // Corrected by: Liasovich Sviatlana <xelj.gjkz atbk dot ru>
 // License: LGPL
-Hyphenator = [];
-Hyphenator.languages = [];
+if (typeof Hyphenator === 'undefined') {
+    Hyphenator = [];
+    Hyphenator.languages = [];
+}
 /*global Hyphenator*/
 Hyphenator.languages['be'] = {
     leftmin: 2,

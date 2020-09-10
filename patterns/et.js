@@ -7,8 +7,10 @@
 //
 // The patterns were generated long ago by applying patgen to an Estonian dictionary;
 // a few patterns were added later manually to prohibit aa-bits type cases.
-Hyphenator = [];
-Hyphenator.languages = [];
+if (typeof Hyphenator === 'undefined') {
+    Hyphenator = [];
+    Hyphenator.languages = [];
+}
 /*global Hyphenator*/
 Hyphenator.languages['et'] = {
     leftmin: 3,

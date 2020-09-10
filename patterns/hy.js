@@ -1,7 +1,9 @@
 // For questions about the armenian hyphenation patterns
 // ask Sahak Petrosyan (sahak at mit dot edu)
-Hyphenator = [];
-Hyphenator.languages = [];
+if (typeof Hyphenator === 'undefined') {
+    Hyphenator = [];
+    Hyphenator.languages = [];
+}
 /*global Hyphenator*/
 Hyphenator.languages['hy'] = {
     leftmin: 1,

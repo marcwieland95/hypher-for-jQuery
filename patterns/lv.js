@@ -1,7 +1,9 @@
 ﻿// For questions about the latvian hyphenation patterns
 // ask Kristaps Karlsons (kristaps dot karlsons at gmail dot com)
-Hyphenator = [];
-Hyphenator.languages = [];
+if (typeof Hyphenator === 'undefined') {
+    Hyphenator = [];
+    Hyphenator.languages = [];
+}
 /*global Hyphenator*/
 Hyphenator.languages['lv'] = {
     leftmin: 2,

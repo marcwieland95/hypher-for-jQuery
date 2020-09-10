@@ -2,8 +2,10 @@
 // crymos at yandex dot ru
 // Вопросы по русскоязычным таблицам переноса отправлять на адрес
 // crymos точка yandex собака ru
-Hyphenator = [];
-Hyphenator.languages = [];
+if (typeof Hyphenator === 'undefined') {
+    Hyphenator = [];
+    Hyphenator.languages = [];
+}
 /*global Hyphenator*/
 Hyphenator.languages['ru'] = Hyphenator.languages['ru_RU'] = Hyphenator.languages['ru-ru'] = {
     leftmin: 2,

@@ -1,7 +1,9 @@
 // For questions about the romanian hyphenation patterns
 // ask irragal at gmail dot com
-Hyphenator = [];
-Hyphenator.languages = [];
+if (typeof Hyphenator === 'undefined') {
+    Hyphenator = [];
+    Hyphenator.languages = [];
+}
 /*global Hyphenator*/
 Hyphenator.languages['ro'] = {
     leftmin: 2,

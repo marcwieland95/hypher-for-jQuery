@@ -2,8 +2,10 @@
 // Pablo Rodríguez (hyphenator at pragmata dot tk)
 // based on LaTeX Latin hyphenation patterns by Claudio Beccari
 // (http://tug.ctan.org/tex-archive/language/hyphenation/lahyph.tex)
-Hyphenator = [];
-Hyphenator.languages = [];
+if (typeof Hyphenator === 'undefined') {
+    Hyphenator = [];
+    Hyphenator.languages = [];
+}
 /*global Hyphenator*/
 Hyphenator.languages['la'] = {
     leftmin: 2,

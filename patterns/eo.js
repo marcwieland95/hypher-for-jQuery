@@ -1,7 +1,9 @@
 // The eo hyphenation patterns
 // ask sergio.pokrovskij (ĉe) gmail.com
-Hyphenator = [];
-Hyphenator.languages = [];
+if (typeof Hyphenator === 'undefined') {
+    Hyphenator = [];
+    Hyphenator.languages = [];
+}
 /*global Hyphenator*/
 Hyphenator.languages['eo'] = {
     leftmin: 2,

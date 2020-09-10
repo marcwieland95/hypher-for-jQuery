@@ -1,6 +1,8 @@
 // For questions about the serbian latin hyphenation patterns ask Sonja Keljević (sonja dot keljevic at gmail dot com)
-Hyphenator = [];
-Hyphenator.languages = [];
+if (typeof Hyphenator === 'undefined') {
+    Hyphenator = [];
+    Hyphenator.languages = [];
+}
 /*global Hyphenator*/
 Hyphenator.languages['sr-latn'] = {
     leftmin: 2,

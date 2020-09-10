@@ -1,7 +1,9 @@
 ﻿// Swedish hyphenation patterns by Jan Michael Rynning, jmr@nada.kth.se
 // Patterns modified for Hyphenator by Andreas Johansson, andreas@ibuypink.com
-Hyphenator = [];
-Hyphenator.languages = [];
+if (typeof Hyphenator === 'undefined') {
+    Hyphenator = [];
+    Hyphenator.languages = [];
+}
 /*global Hyphenator*/
 Hyphenator.languages['sv'] = {
     leftmin: 2,

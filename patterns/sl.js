@@ -1,7 +1,9 @@
 ﻿// For questions about the Slovenian hyphenation patterns
 // ask Mojca Miklavec (mojca dot miklavec dot lists at gmail dot com)
-Hyphenator = [];
-Hyphenator.languages = [];
+if (typeof Hyphenator === 'undefined') {
+    Hyphenator = [];
+    Hyphenator.languages = [];
+}
 /*global Hyphenator*/
 Hyphenator.languages['sl'] = {
     leftmin: 2,

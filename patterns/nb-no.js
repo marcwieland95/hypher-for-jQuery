@@ -108,8 +108,10 @@
 // % nohyph2.tex -- created by Dag and a student; the present file,
 // %   nohyphbx.tex, is more extensive and is recommended.
 
-Hyphenator = [];
-Hyphenator.languages = [];
+if (typeof Hyphenator === 'undefined') {
+    Hyphenator = [];
+    Hyphenator.languages = [];
+}
 /*global Hyphenator*/
 Hyphenator.languages['nb-no'] = {
     leftmin: 2,

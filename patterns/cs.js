@@ -1,7 +1,9 @@
 ﻿// For questions about the Czech hyphenation patterns
 // ask Martin Hasoň (martin dot hason at gmail dot com)
-Hyphenator = [];
-Hyphenator.languages = [];
+if (typeof Hyphenator === 'undefined') {
+    Hyphenator = [];
+    Hyphenator.languages = [];
+}
 /*global Hyphenator*/
 Hyphenator.languages['cs'] = {
     leftmin: 2,

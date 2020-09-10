@@ -1,5 +1,7 @@
-﻿Hyphenator = [];
-Hyphenator.languages = [];
+﻿if (typeof Hyphenator === 'undefined') {
+    Hyphenator = [];
+    Hyphenator.languages = [];
+}
 /*global Hyphenator*/
 Hyphenator.languages['pl'] = Hyphenator.languages['pl_PL'] = Hyphenator.languages['pl-pl'] = {
     leftmin: 2,

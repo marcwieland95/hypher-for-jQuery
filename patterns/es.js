@@ -1,7 +1,9 @@
 ﻿// For questions about the spanish hyphenation patterns
 // ask Luis Pabon (lpabon at metagrama dot es)
-Hyphenator = [];
-Hyphenator.languages = [];
+if (typeof Hyphenator === 'undefined') {
+    Hyphenator = [];
+    Hyphenator.languages = [];
+}
 /*global Hyphenator*/
 Hyphenator.languages['es'] = {
     leftmin: 2,

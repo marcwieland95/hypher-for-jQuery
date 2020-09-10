@@ -1,7 +1,9 @@
 // The en-US hyphenation patterns are retrieved from
 // http://tug.org/svn/texhyphen/trunk/collaboration/repository/hyphenator/
-Hyphenator = [];
-Hyphenator.languages = [];
+if (typeof Hyphenator === 'undefined') {
+    Hyphenator = [];
+    Hyphenator.languages = [];
+}
 /*global Hyphenator*/
 Hyphenator.languages['en-us'] = {
     leftmin: 2,

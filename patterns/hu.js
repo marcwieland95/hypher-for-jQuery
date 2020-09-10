@@ -1,7 +1,9 @@
 ﻿// For questions about the hungarian hyphenation patterns
 // ask Nagy Péter (nagy dot pite at gmail dot com)
-Hyphenator = [];
-Hyphenator.languages = [];
+if (typeof Hyphenator === 'undefined') {
+    Hyphenator = [];
+    Hyphenator.languages = [];
+}
 /*global Hyphenator*/
 Hyphenator.languages['hu'] = {
     leftmin: 2,
